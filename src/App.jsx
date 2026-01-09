@@ -4,16 +4,18 @@ import HomePage from "./pages/homePage";
 import AdminPage from "./pages/adminPage";
 import LoginPage from "./pages/loginPage";
 import RegisterPage from "./pages/registerPage"; 
+import TestPage from "./pages/test";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="w-full h-screen bg-red-300">
+      <div className="w-full h-screen bg-primary">
         <Routes path="/">
-          <Route path="/" element={<HomePage />} />
+          <Route path="/*" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/admin/*" element={<AdminPage />} />
+          <Route path="/test" element={<TestPage/>} />
         </Routes>
       </div>
     </BrowserRouter>
